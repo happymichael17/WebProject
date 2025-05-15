@@ -2,6 +2,7 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrustedBrands from "./components/TrustedBrands";
+import ServicesSection from "./components/products.tsx";
 
 // Main App Component
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
             <Navbar />
             <HeroSection />
             <TrustedBrands />
+            <ServicesSection />
         </div>
     );
 }

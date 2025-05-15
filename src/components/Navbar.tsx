@@ -3,8 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Navbar() {
     return (
-        <header className="w-full py-4 px-6 md:px-12 bg-white flex items-center justify-between">
-            {/* Logo */}
+        <header className="w-full py-4 px-6 md:px-12 bg-white flex items-center justify-between shadow-md mb-4">            {/* Logo */}
             <div className="flex items-center">
                 <img src="/logo.svg" alt="Web Masters Logo" className="h-7" />
             </div>
@@ -28,7 +27,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-center w-4 h-4 bg-white rounded-full text-red-500">
                         <ArrowRight className="w-3 h-4" />
                     </div>
-                    <span className="text-sm">Sign In</span>
+                    <span className="text-sm">Sign Up</span>
                 </button>
             </div>
         </header>
