@@ -28,8 +28,7 @@ export default function HeroSection() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">Experience Genuine<br />Innovation</h1>
 
                 <div className="flex max-w-md">
-                    <input type="text" placeholder="Search for any service..." className="w-full px-30 py-3 bg-gray-800 bg-opacity-80 text-white rounded-l-md focus:outline-none text-sm" />
-                    <button className="bg-yellow-500 px-4 rounded-r-md flex items-center justify-center">
+                    <input type="text" placeholder="Search for any service..." className="w-full px-30 py-3 bg-gray-500  backdrop-blur-md text-white rounded-l-md focus:outline-none text-sm" />                    <button className="bg-yellow-500 px-4 rounded-r-md flex items-center justify-center">
                         <Search className="h-5 w-5 text-white" />
                     </button>
                 </div>
