@@ -3,11 +3,12 @@ import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function TestimonialsSection() {
     return (
-        <section className="bg-red-50 py-16 px-4 mx-auto">
+        <section className=" py-16 px-4 mx-auto" style={{ background: '#F3A81C0A' }}>
             <h2 className="text-3xl font-bold text-black text-center mb-12">Happy Customers Say</h2>
             <div className="flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full">
-                    <div className="bg-red-50 rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300">                        <img src="/woman_photo.svg" alt="Customer 1" className="w-20 h-20 rounded-full mb-4" />
+                    <div className=" rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300" style={{ backgroundColor: '#F3A81C0A' }}>
+                        <img src="/woman_photo.svg" alt="Customer 1" className="w-20 h-20 rounded-full mb-4" />
                         <p className="text-center text-black font-semibold">— Jane M.CEO, Tech Solutions Ltd</p>
                         <p className="text-gray-600 text-center mt-2 relative">
                             <FontAwesomeIcon icon={faQuoteLeft} className="absolute -left-4 top-0 text-yellow-400" />
@@ -16,7 +17,8 @@ export default function TestimonialsSection() {
                         </p>
                     </div>
 
-                    <div className="bg-red-50 rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300">                        <img src="/man_photo.svg" alt="Customer 2" className="w-20 h-20 rounded-full mb-4" />
+                    <div className=" rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300" style={{ backgroundColor: '#F3A81C0A' }}>
+                        <img src="/man_photo.svg" alt="Customer 2" className="w-20 h-20 rounded-full mb-4" />
                         <p className="text-center text-black font-semibold">— John D.CEO, Tech Innovations Ltd</p>
                         <p className="text-gray-600 text-center mt-2 relative">
                             <FontAwesomeIcon icon={faQuoteLeft} className="absolute -left-4 top-0 text-yellow-400" />

@@ -22,7 +22,7 @@ export default function AboutSection() {
     ];
 
     return (
-        <section className="py-10 px-46 max-w mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-red-50">
+        <section className="py-10 px-46 max-w mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center" style={{ backgroundColor: "#F3A81C0A" }}>
             <div className="relative">
                 <img src="/projectscompleted.svg" alt="Professional working" className="rounded-2xl w-full h-auto object-cover" />
                 <div className="absolute top-14 left-5 md:p-16">
