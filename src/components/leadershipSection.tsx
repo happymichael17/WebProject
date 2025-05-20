@@ -27,8 +27,7 @@ const leaders = [
 
 const LeadershipSection = () => {
     return (
-        <section className="p-6 md:p-12">
-
+        <section className="p-6 md:p-12 md:mr-24 md:ml-24">
             <div className="flex items-center gap-4 mt-12">
                 <hr className="w-16 border-2 border-red-600 "/>
                 <h2 className="text-xl font-semibold uppercase text-red-600 mb-0">Our Leadership</h2>
@@ -37,10 +36,10 @@ const LeadershipSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
                 {leaders.map((leader, index) => (
-                    <div key={index} className="relative bg-gray-100 rounded-lg overflow-hidden shadow-md">
-                        <img src={leader.image} alt={leader.name} className="w-full h-full object-cover"/>
+                    <div key={index} className="relative w-[280px] h-[350px] overflow-hidden rounded-2xl shadow-md" style={{backgroundColor: "#333333"}}>
+                        <img src={leader.image} alt={leader.name} className=" object-cover"/>
                         <div
-                            className="absolute bottom-0 w-full bg-black/60 text-white p-4 flex justify-between items-center">
+                            className="absolute bottom-0 w-full  text-white p-4 flex justify-between items-center">
                             <div>
                                 <h3 className="font-semibold">{leader.name}</h3>
                                 <p className="text-sm">{leader.position}</p>

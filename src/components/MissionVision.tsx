@@ -109,7 +109,7 @@ const benefits = [
 const MissionAndBenefitsSection = () => {
     return (
         <section style={{backgroundColor: "#F3A81C0A"}}>
-            <div className="grid w-[1400px] mx-auto justify-center items-center md:grid-cols-2 gap-2">
+            <div className="grid w-[1400px] mx-auto md:grid-cols-2 ">
                 <div>
                     <img
                         src="/our_mission.svg"
@@ -127,15 +127,16 @@ const MissionAndBenefitsSection = () => {
                 </div>
             </div>
 
-            <div className="flex items-center gap-4 mt-12">
+            <div className="flex items-center gap-4 mt-12 md:ml-24">
                 <hr className="w-16 border-2 border-red-600 " />
                 <h2 className="text-xl font-semibold uppercase text-red-600 mb-0">Our Benefits</h2>
             </div>
 
-            <p className="mt-2 text-black">We believe that the best way to create successful marketing campaigns is
+            <p className="mt-2 md:ml-24 text-black">
+                We believe that the best way to create successful marketing campaigns is
                 to <br/> work closely with our clients to understand their goals and challenges.</p>
 
-            <div className="mt-6 flex flex-wrap gap-6 items-center">
+            <div className="md:ml-24 md:mr-24 mt-6 flex flex-wrap gap-6 items-center">
                 <div className="flex items-center gap-4 rounded-lg p-4 flex-1 min-w-0">
                     <img src="/happy_customers.svg" alt="Customer" className="w-150 h-150"/>
                 </div>

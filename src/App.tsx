@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import ServicesPage from "./pages/ServicesPage.tsx";
+import CaseStudyPage from "./pages/CaseStudyPage.tsx";
+import {EcitizenDetails} from "./pages/EcitizenDetails.tsx";
 
 export default function App() {
     return (
@@ -11,6 +13,8 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutUsPage />} />
                 <Route path="/services" element={<ServicesPage />} />
+                <Route path="/case-studies" element={<CaseStudyPage />} />
+                <Route path="case-study/ecitizen-details" element={<EcitizenDetails />} />
             </Routes>
         </BrowserRouter>
     );
