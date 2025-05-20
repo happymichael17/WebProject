@@ -15,22 +15,18 @@ export default function ServicesSection() {
         {
             title: 'Custom Software Development',
             image: '/image1.svg',
-            alt: 'Custom software development'
         },
         {
             title: 'Cybersecurity Services',
             image: '/image2.svg',
-            alt: 'Cybersecurity services'
         },
         {
             title: 'Mobile App Development',
             image: '/image3.svg',
-            alt: 'Mobile app development'
         },
         {
             title: 'Digital Transformation Consulting',
             image: '/image4.svg',
-            alt: 'Digital transformation consulting'
         }
     ];
 
@@ -55,16 +51,15 @@ export default function ServicesSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
                     <div key={index} className="bg-white rounded-2xl shadow-sm p-6 flex flex-col">
-                        <div className="mb-4 overflow-hidden rounded-2xl">
+                        <div className="mb-4 overflow-hidden rounded-2xl p-0">
                             <img
                                 src={service.image}
-                                alt={service.alt}
-                                className="w-full h-40 object-cover"
+                                className="w-full h-40 object-cover rounded-2xl m-0 p-0"
+                                style={{ objectPosition: "top" }}
                             />
                         </div>
-                        <p className="text-sm text-black font-bold mt-2 font-awesome"> {service.alt}  </p>
                         <div className="mt-auto flex justify-between items-center">
-                            <h3 className="text-lg font-bold font-awesome">{service.title}</h3>
+                            <h3 className="text-lg font-bold text-black font-awesome">{service.title}</h3>
                             <button
                                 className={`rounded-full p-2 w-25 h-8 flex items-center justify-center border  bg-white text-black hover:bg-red-500 hover:text-white`}
                             >

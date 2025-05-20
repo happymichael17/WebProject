@@ -108,8 +108,8 @@ const benefits = [
 
 const MissionAndBenefitsSection = () => {
     return (
-        <section className="p-6 md:p-12 lg:p-20" style={{backgroundColor: "#F3A81C0A"}}>
-            <div className="grid md:grid-cols-2 gap-2">
+        <section style={{backgroundColor: "#F3A81C0A"}}>
+            <div className="grid w-[1400px] mx-auto justify-center items-center md:grid-cols-2 gap-2">
                 <div>
                     <img
                         src="/our_mission.svg"

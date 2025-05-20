@@ -17,8 +17,6 @@ export default function HeroSection() {
 
     return (
 
-
-
         <section className="relative px-4 md:px-16 max-w-[98%] mx-auto rounded-4xl h-96 md:h-[550px] bg-gray-900 overflow-hidden">
             <video ref={videoRef} autoPlay loop muted playsInline className="absolute z-0 inset-0 w-full h-full object-cover brightness-50">
                 <source src="/hero_video.mp4" type="video/mp4" />

@@ -1,9 +1,9 @@
 import Footer from "../components/Footer.tsx";
 import Navbar from '../components/Navbar';
 import PlatformsWeDevelopFor from "../components/PlatformsWeDevelopFor";
-import MissionVision from "../components/MissionVision.tsx";
 import InnovationSection from "../components/innovationSection.tsx";
 import LeadershipSection from "../components/leadershipSection.tsx";
+import MissionAndBenefitsSection from "../components/MissionVision.tsx";
 
 export default function AboutUsPage() {
     return (
@@ -11,7 +11,7 @@ export default function AboutUsPage() {
             <Navbar />
             <InnovationSection />
             <PlatformsWeDevelopFor />
-            <MissionVision />
+            <MissionAndBenefitsSection />
             <LeadershipSection />
             <div className="mt-auto">
                 <Footer />

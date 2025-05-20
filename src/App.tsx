@@ -1,14 +1,17 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// App.tsx or main router file
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
-
-
-const router = createBrowserRouter([
-    { path: '/', element: <HomePage /> },
-    { path: '/about', element: <AboutUsPage /> },]
-       )
-
+import ServicesPage from "./pages/ServicesPage.tsx";
 
 export default function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutUsPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
