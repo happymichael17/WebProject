@@ -50,13 +50,15 @@ export default function ServicesSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
-                    <div key={index} className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 flex flex-col">
+                    <div key={index} className="bg-white rounded-xl shadow-sm p-3 sm:p-4 flex flex-col">
                         <div className="mb-4 overflow-hidden rounded-2xl p-0">
                             <img
                                 src={service.image}
-                                className="w-full h-32 sm:h-40 object-cover rounded-2xl m-0 p-0"
-                                style={{ objectPosition: "top" }}
+                                alt={service.title}
+                                className="w-full aspect-[5/4] object-cover rounded-4xl"
+                                style={{ objectPosition: 'top' }}
                             />
+
                         </div>
                         <div className="mt-auto flex justify-between items-center">
                             <h3 className="text-lg font-bold text-black font-awesome">{service.title}</h3>
