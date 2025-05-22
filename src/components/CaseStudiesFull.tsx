@@ -21,7 +21,9 @@ export default function CaseStudiesFull() {
                             The eCitizen Kenya platform stands as one of the most
                             transformative digital solutions for the Government of Kenya.
                         </p>
-                        <button className="flex items-center text-red-500 font-bold mt-4">
+                        <button className="flex items-center text-red-500 font-bold mt-4"
+                                onClick={() => window.location.href = '/case-study/ecitizen-details'}
+                        >
                             <div className="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full">
                                 <FontAwesomeIcon icon={faArrowRight} className="text-white"/>
                             </div>
