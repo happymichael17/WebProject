@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import {ArrowRight, Menu, X} from "lucide-react";
 
 const navItems = [
+    {label: "HOME", path: "/"},
     {label: "ABOUT", path: "/about"},
     {label: "SERVICES", path: "/services"},
     {label: "PRODUCTS", path: "/products"},
@@ -12,7 +13,8 @@ const navItems = [
 export default function Navbar() {
     // Mock location for demo - replace with useLocation() in your app
 // Use window.location.pathname for current page detection
-    const location = typeof window !== "undefined" ? { pathname: window.location.pathname } : { pathname: "/" };    const [menuOpen, setMenuOpen] = useState(false);
+    const location = typeof window !== "undefined" ? {pathname: window.location.pathname} : {pathname: "/"};
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -44,11 +46,13 @@ export default function Navbar() {
             className="w-full py-3 sm:py-4 px-3 sm:px-6 lg:px-8 xl:px-16 2xl:px-28 bg-white flex items-center justify-between shadow-md mb-4 relative z-40">
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
-                <img
-                    src="/logo.svg"
-                    alt="Web Masters Logo"
-                    className="h-6 sm:h-7 w-auto"
-                />
+                <a href="/" className="cursor-pointer">
+                    <img
+                        src="/logo.svg"
+                        alt="Web Masters Logo"
+                        className="h-6 sm:h-7 w-auto"
+                    />
+                </a>
             </div>
 
             {/* Desktop Nav - Hidden on mobile and tablet */}
@@ -80,14 +84,21 @@ export default function Navbar() {
             {/* Mobile/Tablet Hamburger - Visible on screens smaller than lg */}
             <div className="lg:hidden">
                 <button
-                    onClick={toggleMenu}
-                    className="p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleMenu();
+                    }}
+                    className="p-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500"
                     aria-label="Toggle menu"
+                    aria-expanded={menuOpen}
+                    type="button"
                 >
                     {menuOpen ? (
                         <X className="w-5 h-5 sm:w-6 sm:h-6"/>
                     ) : (
-                        <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-black"/>                    )}
+                        <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-black"/>
+                    )}
                 </button>
             </div>
 
@@ -105,13 +116,25 @@ export default function Navbar() {
 
             {/* Mobile/Tablet Menu Dropdown */}
             <div
-                className={`absolute top-full left-0 w-full bg-white shadow-lg lg:hidden z-50 transition-all duration-300 ease-in-out ${
+                className={`absolute top-full left-0 w-full bg-white shadow-xl rounded-b-2xl lg:hidden z-50 transition-all duration-300 ease-in-out ${
                     menuOpen
-                        ? 'opacity-100 visible transform translate-y-0'
-                        : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
+                        ? 'opacity-100 visible translate-y-0'
+                        : 'opacity-0 invisible -translate-y-2'
+                }`}
+            >
+                {/* Close Button */}
+                <div className="flex justify-end px-6 pt-4">
+                    <button
+                        onClick={() => setMenuOpen(false)}
+                        className="text-gray-600 hover:text-red-500 transition-colors duration-200"
+                        aria-label="Close menu"
+                    >
+                        <X className="w-6 h-6"/>
+                    </button>
+                </div>
+
                 <nav className="max-h-screen overflow-y-auto">
-                    <ul className="flex flex-col py-4">
+                    <ul className="flex flex-col px-4 pb-6">
                         {navItems.map((item, index) => {
                             const isActive = location.pathname === item.path;
                             return (
@@ -119,28 +142,32 @@ export default function Navbar() {
                                     <a
                                         href={item.path}
                                         onClick={() => setMenuOpen(false)}
-                                        className={`block px-6 py-3 text-black hover:text-red-500 hover:bg-gray-50 font-medium text-base sm:text-lg transition-all duration-200 ${
+                                        className={`block px-4 py-3 rounded-lg text-black hover:text-red-500 hover:bg-gray-100 font-medium text-base sm:text-lg transition-all duration-200 ${
                                             isActive ? "text-red-500 bg-red-50" : ""
                                         }`}
                                     >
-                    <span>
-                      <span className="text-red-400">•</span> {item.label}
-                    </span>
+                            <span className="flex items-center gap-2">
+                                <span className="text-red-400">•</span> {item.label}
+                            </span>
                                     </a>
                                 </li>
                             );
                         })}
 
                         {/* Mobile Sign Up Button */}
-                        <li className="px-6 pt-4 pb-2">
+                        <li className="pt-6 px-4">
                             <button
                                 onClick={() => setMenuOpen(false)}
-                                className="w-full bg-red-500 text-white px-6 py-3 rounded-full font-medium hover:bg-red-600 transition-all duration-300 flex items-center justify-center gap-3 group hover:shadow-lg"
+                                className="w-full bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-600 transition-all duration-300 flex items-center justify-center gap-3 group hover:shadow-lg"
                             >
-                                <ArrowRight
-                                    className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"/>
+                                {/* Arrow in a white circle */}
+                                <span
+                                    className="bg-white text-red-500 rounded-full p-1.5 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+        <ArrowRight className="w-4 h-4"/>
+    </span>
                                 <span className="text-base">Sign Up</span>
                             </button>
+
                         </li>
                     </ul>
                 </nav>
