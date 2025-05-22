@@ -11,9 +11,7 @@ export default function ServicesPage() {
             <Navbar />
             <HeroSectionServices />
             <WhatWeOffer/>
-
             <WhoForServices/>
-
             <div className="mt-auto">
                 <Footer />
             </div>

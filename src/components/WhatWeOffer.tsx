@@ -36,7 +36,7 @@ const WhatWeOffer = () => {
     return (
         <section style={{backgroundColor: "#F3A81C0A"}}>
 
-            <div className="flex items-center gap-4 mt-12 md:ml-24">
+            <div className="flex items-center gap-4 mt-12 md:ml-24 ">
                 <hr className="w-16 border-2 border-red-600 " />
                 <h2 className="text-xl font-semibold uppercase text-red-600 mb-0">What We Offer</h2>
             </div>
@@ -48,7 +48,7 @@ const WhatWeOffer = () => {
 
             <div className="md:ml-24 md:mr-24  flex   items-center">
                 <div className="flex items-center gap-4 rounded-lg p-4  min-w-0">
-                    <img src="/happy_customers.svg" alt="Customer" className="w-150 h-150"/>
+                    <img src="/happy_customers.svg" alt="Customer" className="w-150"/>
                 </div>
                 <div className="flex flex-col gap-4 flex-1 min-w-0">
                     {benefits.map((benefit, index) => (

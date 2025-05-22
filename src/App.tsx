@@ -5,6 +5,8 @@ import AboutUsPage from './pages/AboutUsPage';
 import ServicesPage from "./pages/ServicesPage.tsx";
 import CaseStudyPage from "./pages/CaseStudyPage.tsx";
 import {EcitizenDetails} from "./pages/EcitizenDetails.tsx";
+import ContactUsPage from "./pages/ContactUsPage.tsx";
+import ProductsPage from "./pages/ProductsPage.tsx";
 
 export default function App() {
     return (
@@ -15,6 +17,8 @@ export default function App() {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/case-studies" element={<CaseStudyPage />} />
                 <Route path="case-study/ecitizen-details" element={<EcitizenDetails />} />
+                <Route path="/contact-us" element={<ContactUsPage/>} />
+                <Route path="/products" element={<ProductsPage />} />
             </Routes>
         </BrowserRouter>
     );

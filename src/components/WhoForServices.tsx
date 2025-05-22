@@ -29,9 +29,6 @@ export default function WhoForServices() {
                     </div>
                 ))}
             </div>
-
-
-
         </section>
     );
 }

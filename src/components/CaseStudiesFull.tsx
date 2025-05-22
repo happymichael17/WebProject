@@ -11,12 +11,13 @@ export default function CaseStudiesFull() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl shadow-md p-6 relative">
+                {/* eCitizen Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2014</p>
-                        <h3 className="text-xl text-black font-bold">Government Solutions: eCitizen Kenya</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2014</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             The eCitizen Kenya platform stands as one of the most
                             transformative digital solutions for the Government of Kenya.
                         </p>
@@ -28,13 +29,13 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl shadow-md p-6 relative">
+                {/* Milescoop Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2020</p>
-                        <h3 className="text-xl text-black font-bold">Real Estate: Milescoop Ventures Ltd</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2020</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Milescoop Ventures Ltd is a leading real estate company that
                             specializes in buying, subdividing, and selling land to clients both in Kenya and
                             abroad.
@@ -47,13 +48,13 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl shadow-md p-6 relative">
+                {/* Fintech Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2022</p>
-                        <h3 className="text-xl text-black font-bold">Fintech: Example Fintech Project</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2022</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Example Fintech Project is revolutionizing digital payments and financial inclusion across
                             Africa.
                         </p>
@@ -67,13 +68,15 @@ export default function CaseStudiesFull() {
                 </div>
             </div>
 
+            ```typescriptreact
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl mt-12 shadow-md p-6 relative">
+                {/* eCitizen Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2014</p>
-                        <h3 className="text-xl text-black font-bold">Government Solutions: eCitizen Kenya</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2014</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             The eCitizen Kenya platform stands as one of the most
                             transformative digital solutions for the Government of Kenya.
                         </p>
@@ -85,13 +88,13 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl mt-12 shadow-md p-6 relative">
+                {/* Milescoop Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2020</p>
-                        <h3 className="text-xl text-black font-bold">Real Estate: Milescoop Ventures Ltd</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2020</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Milescoop Ventures Ltd is a leading real estate company that
                             specializes in buying, subdividing, and selling land to clients both in Kenya and
                             abroad.
@@ -104,13 +107,13 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl mt-12 shadow-md p-6 relative">
+                {/* Fintech Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2022</p>
-                        <h3 className="text-xl text-black font-bold">Fintech: Example Fintech Project</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2022</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Example Fintech Project is revolutionizing digital payments and financial inclusion across
                             Africa.
                         </p>
@@ -124,20 +127,19 @@ export default function CaseStudiesFull() {
                 </div>
             </div>
 
+            {/* Remove duplicate and inconsistent card grids below */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl shadow-md p-6 mt-12 relative">
+                {/* eCitizen Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2014</p>
-                        <h3 className="text-xl text-black font-bold">Government Solutions: eCitizen Kenya</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2014</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             The eCitizen Kenya platform stands as one of the most
                             transformative digital solutions for the Government of Kenya.
                         </p>
-                        <button
-                            className="flex items-center text-red-500 font-bold mt-4"
-                            onClick={() => window.location.href = '/case-study/ecitizen-details'}
-                        >
+                        <button className="flex items-center text-red-500 font-bold mt-4">
                             <div className="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full">
                                 <FontAwesomeIcon icon={faArrowRight} className="text-white"/>
                             </div>
@@ -145,13 +147,13 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl mt-12 shadow-md p-6 relative">
+                {/* Milescoop Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2020</p>
-                        <h3 className="text-xl text-black font-bold">Real Estate: Milescoop Ventures Ltd</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2020</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Milescoop Ventures Ltd is a leading real estate company that
                             specializes in buying, subdividing, and selling land to clients both in Kenya and
                             abroad.
@@ -164,20 +166,17 @@ export default function CaseStudiesFull() {
                         </button>
                     </div>
                 </div>
-
-                <div className="bg-white rounded-2xl mt-12 shadow-md p-6 relative">
+                {/* Fintech Card */}
+                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
                     <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
-                    <div className="mt-4">
-                        <p className="text-sm text-gray-500">2022</p>
-                        <h3 className="text-xl text-black font-bold">Fintech: Example Fintech Project</h3>
-                        <p className="text-gray-400 mt-2">
+                    <div className="mt-4 flex flex-col flex-1">
+                        <p className="text-sm text-gray-500 mb-1">2022</p>
+                        <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>
+                        <p className="text-gray-400 mt-2 flex-1">
                             Example Fintech Project is revolutionizing digital payments and financial inclusion across
                             Africa.
                         </p>
-                        <button
-                            className="flex items-center text-red-500 font-bold mt-4"
-                            onClick={() => window.location.href = '/case-study/fintech'}
-                        >
+                        <button className="flex items-center text-red-500 font-bold mt-4">
                             <div className="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full">
                                 <FontAwesomeIcon icon={faArrowRight} className="text-white"/>
                             </div>
@@ -186,6 +185,7 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 }

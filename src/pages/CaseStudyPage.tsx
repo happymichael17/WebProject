@@ -7,7 +7,6 @@ export default function CaseStudyPage() {
         <div className="bg-white w-full max-w-full flex flex-col min-h-screen">
             <Navbar />
             <CaseStudiesFull/>
-
             <div className="mt-auto">
                 <Footer />
             </div>
