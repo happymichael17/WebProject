@@ -43,7 +43,7 @@ export default function Navbar() {
 
     return (
         <header
-            className="w-full py-3 sm:py-4 px-3 sm:px-6 lg:px-8 xl:px-16 2xl:px-28 bg-white flex items-center justify-between shadow-md mb-4 relative z-40">
+            className="w-full py-3 sm:py-4 px-3 sm:px-6 lg:px-8 xl:px-16 2xl:px-28 bg-white flex items-center justify-between shadow-md  relative z-40">
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
                 <a href="/" className="cursor-pointer">

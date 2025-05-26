@@ -34,51 +34,55 @@ const benefits = [
 
 const MissionAndBenefitsSection = () => {
     return (
-        <section className="px-4 py-8 md:py-12" style={{backgroundColor: "#F3A81C0A"}}>
-            <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="w-full">
-                    <img
-                        src="/our_mission.svg"
-                        alt="Vision Image"
-                        className="w-full h-auto object-cover rounded-lg md:rounded-4xl"
-                    />
-                </div>
-                <div className="w-full">
-                    <img
-                        src="/visionpro.svg"
-                        alt="Vision Image"
-                        className="w-full h-auto object-cover rounded-lg md:rounded-4xl"
-                    />
-                </div>
-            </div>
 
-            <div className="flex items-center gap-4 mt-8 md:mt-12 mx-4 md:mx-24">
-                <hr className="w-12 md:w-16 border-2 border-red-600" />
-                <h2 className="text-lg md:text-xl font-semibold uppercase text-red-600 mb-0">Our Benefits</h2>
-            </div>
-
-            <p className="mt-2 mx-4 md:mx-24 text-sm md:text-base text-black">
-                We believe that the best way to create successful marketing campaigns is
-                to <br className="hidden md:block"/> work closely with our clients to understand their goals and challenges.
-            </p>
-
-            <div className="mx-4 md:mx-24 mt-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
-                <div className="flex items-center justify-center md:justify-start gap-4 rounded-lg p-4 flex-1 min-w-0">
-                    <img src="/happy_customers.svg" alt="Customer" className="w-full max-w-auto md:max-w-auto h-auto"/>
+        <div  style={{backgroundColor: "#F3A81C0A"}}>
+            <section className="  container sm:p-6 lg:p-12 mx-auto w-full " >
+                <div className="  w-full flex flex-col md:flex-row gap-2">
+                    <div className=" w-full">
+                        <img
+                            src="/our_mission.svg"
+                            alt="Vision Image"
+                            className="w-full h-auto object-cover rounded-lg md:rounded-4xl"
+                        />
+                    </div>
+                    <div className="w-full">
+                        <img
+                            src="/visionpro.svg"
+                            alt="Vision Image"
+                            className="w-full h-auto object-cover rounded-lg md:rounded-4xl"
+                        />
+                    </div>
                 </div>
-                <div className="flex flex-col gap-4 flex-1 min-w-0">
-                    {benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                            {benefit.icon}
-                            <div>
-                                <h3 className="font-semibold text-black text-base md:text-lg">{benefit.title}</h3>
-                                <p className="text-xs md:text-sm text-gray-700">{benefit.description}</p>
+
+                <div className="flex items-center gap-4 mt-8 md:mt-12 mx-4 ">
+                    <hr className="w-12 md:w-16 border-2 border-red-600" />
+                    <h2 className="text-lg md:text-xl font-semibold uppercase text-red-600 mb-0">Our Benefits</h2>
+                </div>
+
+                <p className="mt-2 mx-4 text-sm md:text-base text-black">
+                    We believe that the best way to create successful marketing campaigns is
+                    to <br className="hidden md:block"/> work closely with our clients to understand their goals and challenges.
+                </p>
+
+                <div className=" mt-6 flex flex-col md:flex-row gap-6 justify-center md:items-center">
+                    <div className="flex items-center justify-center md:justify-center gap-4 rounded-lg p-4 flex-1">
+                        <img src="/happy_customers.svg" alt="Customer" className="w-full  max-w-auto md:max-w-auto h-auto"/>
+                    </div>
+                    <div className="flex flex-col gap-4 w-full md:w-[50%] ">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex items-start gap-3">
+                                {benefit.icon}
+                                <div>
+                                    <h3 className="font-semibold text-black text-base md:text-lg">{benefit.title}</h3>
+                                    <p className="text-xs md:text-sm text-gray-700">{benefit.description}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
     );
 };
 

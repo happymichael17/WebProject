@@ -10,21 +10,21 @@ export default function PlatformsWeDevelopFor() {
     ];
 
     return (
-        <section className=" py-2 px-4 sm:px-8 md:px-16 bg-white">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 md:gap-16 max-w-7xl mx-auto">
+        <section className="  container sm:p-6 lg:p-12 mx-auto w-full " >
+            <div className="flex flex-col md:flex-row justify-centecontainer sm:p-6 lg:p-12 mx-auto w-full r  ">
                 {/* Title */}
-                <div className="text-center md:text-left">
+                <div className="text-center md:text-center">
                     <h2 className=" sm:text-3xl font-bold text-gray-800 leading-tight">
                         Platforms We Develop For:
                     </h2>
                 </div>
 
                 {/* Logos */}
-                <div className="flex justify-start gap-6 md:gap-24">
+                <div className="flex justify-center gap-4">
                     {brands.map((brand, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-center w-28 sm:w-32 md:w-36 h-16 sm:h-20"
+                            className="flex  justify-center w-28 sm:w-32 md:w-36 h-16 sm:h-20"
                         >
                             <img
                                 src={brand.logo}

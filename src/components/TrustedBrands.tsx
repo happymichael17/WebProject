@@ -8,11 +8,13 @@ export default function TrustedBrands() {
         {name: "Automation", logo: "/automation.svg"},
         {name: "Leafe", logo: "/leafe.svg"},
         {name: "Automation", logo: "/automation.svg"},
+        {name: "Leafe", logo: "/leafe.svg"},
+
     ];
 
     return (
-        <section className="py-10 px-4 sm:px-8 md:px-16 bg-white">
-            <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-26">
+        <section className="py-10 container sm:p-6 lg:p-12 mx-auto w-full ">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 ">
                 <div className="mb-6 md:mb-0 md:mr-8 text-center md:text-left">
                     <h2 className="text-lg md:text-xl font-bold text-gray-800 leading-tight">
                         Trusted by Leading<br />Brands

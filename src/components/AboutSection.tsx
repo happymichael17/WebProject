@@ -22,41 +22,43 @@ export default function AboutSection() {
     ];
 
     return (
-        <section className="py-1 px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-4 items-center-safe" style={{ backgroundColor: "#F3A81C0A" }}>
-            <div className="relative px-4 py-8 md:px-8">
-                <img src="/projectscompleted.svg" alt="Professional working" className="rounded-2xl object-cover w-full h-auto" />
-                <div className="absolute top-8 left-6 md:top-14 md:left-10 md:p-8">
-                    <img src="/review_image_about.svg" alt="Star" className="w-16 h-16 md:w-full md:h-full" />
-                </div>
+        <div className="w-full" style={{ backgroundColor: "#F3A81C0A" }}>
+            <section className="container flex flex-row sm:p-6 lg:p-12 mx-auto w-full gap-12">
+                <div className="relative w-full rounded-4xl ">
+                   <img src="/projectscompleted.svg" alt="Professional working" className="rounded-4xl object-cover w-full h-full" />
+                    <div className="absolute top-8 left-6 md:top-14 md:p-8">
+                         <img src="/review_image_about.svg" alt="Star" className="w-auto h-auto md:w-auto md:h-auto" />
+                     </div>
+                     <div className="absolute top-20 right-6 md:top-34  text-white">
+                         <p className="text-xl md:text-4xl font-bold">{awards}+</p>
+                         <p className="text-sm md:text-lg">Worldwide <br /> Awards</p>
+                     </div>
 
-                <div className="absolute top-20 right-6 md:top-34 md:right-24 text-white">
-                    <p className="text-xl md:text-4xl font-bold">{awards}+</p>
-                    <p className="text-sm md:text-lg">Worldwide <br /> Awards</p>
-                </div>
+                    <div className="absolute bottom-8 left-6 md:bottom-16 md:left-24 text-white">
+                       <p className="text-2xl md:text-4xl font-bold">{guides}+</p>
+                       <p className="text-sm md:text-lg">Professional <br /> Guides</p>
+                   </div>
+                 </div>
 
-                <div className="absolute bottom-8 left-6 md:bottom-16 md:left-24 text-white">
-                    <p className="text-2xl md:text-4xl font-bold">{guides}+</p>
-                    <p className="text-sm md:text-lg">Professional <br /> Guides</p>
-                </div>
+                 <div className="w-full flex flex-col justify-center items-start gap-4 px-4 md:px-8">
+                     <h2 className="text-xl md:text-3xl font-bold text-black mb-6 ">
+                         Getting started is easy, connect with top African tech talent efficiently.
+                     </h2>
+                     <div className=" mx-auto w-full md:gap-4 ">
+                        {features.map((feature, index) => (
+                             <div key={index} className="flex items-start space-x-4 mb-4">
+                                 <img src={feature.icon} alt={feature.title} className="w-8 h-8" />
+                                 <div>
+                                     <h3 className="text-lg text-black font-bold">{feature.title}</h3>
+                                     <p className="text-gray-600">{feature.description}</p>
             </div>
+                             </div>
+                        ))}
+                     </div>
+                 </div>
+             </section>
+        </div>
 
-            <div>
-                <h2 className="text-xl md:text-3xl font-bold text-black mb-6 px-0 md:px-16">
-                    Getting started is easy, connect with top African tech talent efficiently.
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-0 md:px-16">
-                    {features.map((feature, index) => (
-                        <div key={index} className="flex items-start space-x-4 mb-4">
-                            <img src={feature.icon} alt={feature.title} className="w-8 h-8" />
-                            <div>
-                                <h3 className="text-lg text-black font-bold">{feature.title}</h3>
-                                <p className="text-gray-600">{feature.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
     );
 }
 

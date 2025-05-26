@@ -17,7 +17,7 @@ export default function HeroSection() {
 
     return (
 
-        <section className="relative mx-4 sm:mx-6 md:mx-auto px-2 sm:px-4 md:px-16 max-w-full md:max-w-[98%] rounded-3xl md:rounded-4xl h-64 sm:h-80 md:h-[550px] bg-gray-900 overflow-hidden">
+        <section className="relative mx-4 sm:mx-6 md:mx-auto my-6 px-2 sm:px-4 md:px-16 max-w-full md:max-w-[98%] rounded-3xl md:rounded-4xl h-64 sm:h-80 md:h-[550px] bg-gray-900 overflow-hidden">
             <video
                 ref={videoRef}
                 autoPlay

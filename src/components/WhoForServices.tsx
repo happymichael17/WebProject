@@ -9,22 +9,20 @@ export default function WhoForServices() {
     ];
 
     return (
-        <section className="py-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-12">
-                Who It&apos;s For
-            </h2>
-            <div className="flex flex-wrap gap-6 justify-center">
+        <section className="container sm:p-6 lg:p-12 mx-auto w-full ">
+            <h2 className="text-2xl md:text-3xl text-center text-black font-bold mb-8">Who It's For</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 justify-center">
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 flex flex-col items-center w-36 sm:w-44 md:w-48 lg:w-42 flex-none transition-all"
+                        className="bg-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center w-full"
                     >
                         <img
                             src={service.icon}
                             alt={service.title}
-                            className="mb-6 w-14 h-14 object-contain"
+                            className="mb-3 h-12 w-12"
                         />
-                        <p className="text-sm sm:text-base md:text-lg font-semibold text-black text-center leading-snug">
+                        <p className="text-base md:text-lg text-black font-semibold text-center truncate w-full">
                             {service.title}
                         </p>
                     </div>

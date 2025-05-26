@@ -12,8 +12,8 @@ export default function CaseStudiesFull() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* eCitizen Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2014</p>
                         <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
@@ -32,8 +32,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Milescoop Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2020</p>
                         <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
@@ -51,8 +51,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Fintech Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2022</p>
                         <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>
@@ -70,11 +70,9 @@ export default function CaseStudiesFull() {
                 </div>
             </div>
 
-            ```typescriptreact
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* eCitizen Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">                {/* eCitizen Card */}
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2014</p>
                         <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
@@ -91,8 +89,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Milescoop Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2020</p>
                         <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
@@ -110,8 +108,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Fintech Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2022</p>
                         <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>
@@ -130,10 +128,9 @@ export default function CaseStudiesFull() {
             </div>
 
             {/* Remove duplicate and inconsistent card grids below */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* eCitizen Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-lg w-full"/>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">                {/* eCitizen Card */}
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2014</p>
                         <h3 className="text-xl text-black font-bold mb-2">Government Solutions: eCitizen Kenya</h3>
@@ -150,8 +147,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Milescoop Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/milescoop.svg" alt="Case Study 2" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2020</p>
                         <h3 className="text-xl text-black font-bold mb-2">Real Estate: Milescoop Ventures Ltd</h3>
@@ -169,8 +166,8 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
                 {/* Fintech Card */}
-                <div className="bg-white rounded-2xl shadow-md p-6 relative flex flex-col h-full">
-                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-lg w-full"/>
+                <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
+                    <img src="/case_study3.svg" alt="Case Study 3" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
                         <p className="text-sm text-gray-500 mb-1">2022</p>
                         <h3 className="text-xl text-black font-bold mb-2">Fintech: Example Fintech Project</h3>

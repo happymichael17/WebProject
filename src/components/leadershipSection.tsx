@@ -30,15 +30,15 @@ const leaders = [
 
 const LeadershipSection = () => {
     return (
-        <section className="p-4 sm:p-6 lg:p-12 container mx-auto">
-            <div className="flex items-center gap-4 mt-8 md:mt-12 mx-4 md:mx-24">
+        <section className=" sm:p-6 lg:p-12 container mx-auto ">
+            <div className="flex items-center gap-4 mt-8 md:mt-12 mx-4">
                 <hr className="w-12 md:w-16 border-2 border-red-600" />
-                <h2 className="text-lg md:text-xl font-semibold uppercase text-red-600 mb-0">Our Benefits</h2>
+                <h2 className="text-lg md:text-xl font-semibold uppercase text-red-600 mb-0">Our Leadership</h2>
             </div>
-            <p className="mt-2 mx-4 md:mx-24 text-sm md:text-base text-black">
+            <p className="mt-2 mx-4 text-sm md:text-base text-black">
                         Meet the team crafting secure, fast, and engaging digital experiences.</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 mt-4 sm:mt-6 justify-items-center mx-4 md:mx-24">
+            <div className=" w-full flex flex-col md:flex-row gap-6 sm:gap-4 mt-4 sm:mt-6 justify-between">
                             {leaders.map((leader, index) => (
                                 <div key={index}
                                      className="relative w-full max-w-[280px] aspect-[4/5] overflow-hidden rounded-2xl mb-4 sm:mb-0">

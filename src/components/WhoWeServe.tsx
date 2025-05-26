@@ -10,8 +10,8 @@ export default function WhoWeServeSection() {
     ];
 
     return (
-        <section className="py-12 px-4 md:py-16 md:px-8 max-w-7xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl text-black font-bold mb-8">Who It's For</h2>
+        <section className="container sm:p-6 lg:p-12 mx-auto w-full ">
+            <h2 className="text-2xl md:text-3xl text-center text-black font-bold mb-8">Who We Serve</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 justify-center">
                 {services.map((service, index) => (
                     <div
