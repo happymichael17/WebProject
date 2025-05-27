@@ -1,6 +1,6 @@
 const InnovationSection = () => (
-    <section className="flex flex-col my-6 w-full  sm:px-6 md:px-8">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mx-auto mb-4 text-black leading-tight">
+    <section className="flex flex-col my-6 w-full  ">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl sm:px-6 md:px-8 font-bold text-center mx-auto mb-4 text-black leading-tight">
             Experience Genuine <br className="sm:block" /> Innovation
         </h1>
 
@@ -12,7 +12,7 @@ const InnovationSection = () => (
 
         <hr className="w-4/5 md:w-3/5 rounded-2xl mx-auto border-yellow-400 mb-6"/>
 
-        <div className="flex justify-center w-full">
+        <div className="flex w-full ">
             <img
                 src="/image_group.svg"
                 alt="Innovation"
