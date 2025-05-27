@@ -1,46 +1,25 @@
-
 const InnovationSection = () => (
+    <section className="flex flex-col my-6 w-full  sm:px-6 md:px-8">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mx-auto mb-4 text-black leading-tight">
+            Experience Genuine <br className="sm:block" /> Innovation
+        </h1>
 
-
-// const InnovationSection = () => (
-//     <section className="flex flex-col items-center justify-center text-center py-12 md:py-20 px-8 md:px-8">
-//         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 fa-font-awesome text-black">
-//             Experience Genuine <br className="hidden md:block" /> Innovation
-//         </h1>
-//         <p className="text-base sm:text-lg md:text-2xl text-gray-700 mb-8 md:mb-16 fa-font-awesome py-6 md:py-12 max-w-3xl">
-//             Our leadership team at Webmasters Kenya Ltd is united by a shared commitment to
-//             excellence, <br className="hidden md:block" /> innovation, and customer-centric solutions. Together, they drive the company forward,
-//             ensuring <br className="hidden md:block" /> that we remain a leader in delivering technology solutions that make a meaningful impact.
-//         </p>
-//         <hr className="w-full max-w-3xl rounded-2xl border-yellow-400 mb-8 md:mb-16"/>
-//        <div className="w-screen max-w-none relative left-1/2 right-1/2 -translate-x-1/2">
-//             <img
-//                 src="/image_group.svg"
-//                 alt="Innovation"
-//                 className="w-full h-auto object-cover"
-//             />
-//         </div>
-//     </section>
-
-    <section className="flex flex-col my-6 w-full">
-        <h1 className="text-4xl md:text-6xl font-bold text-center mx-auto mb-4 fa-font-awesome text-black">
-            Experience Genuine <br/> Innovation </h1>
-        <p className="text-lg md:text-2xl text-gray-700 mx-auto mb-16 fa-font-awesome py-2">
+        <p className="text-base sm:text-lg md:text-2xl text-gray-700 text-center mx-auto mb-8 md:mb-16 py-2 px-4 max-w-4xl">
             Our leadership team at Webmasters Kenya Ltd is united by a shared commitment to
-            excellence, <br/> innovation, and customer-centric solutions. Together, they drive the company forward,
-            ensuring <br/> that we remain a leader in delivering technology solutions that make a meaningful impact.
+            excellence, innovation, and customer-centric solutions. Together, they drive the company forward,
+            ensuring that we remain a leader in delivering technology solutions that make a meaningful impact.
         </p>
 
-        <hr className="w-90 rounded-2xl mx-auto border-yellow-400 mb-6"/>
-        <img
-            src="/image_group.svg"
-            alt="Innovation"
-            className=" sm:w-full w-full h-auto object-cover"
-        />
+        <hr className="w-4/5 md:w-3/5 rounded-2xl mx-auto border-yellow-400 mb-6"/>
+
+        <div className="flex justify-center w-full">
+            <img
+                src="/image_group.svg"
+                alt="Innovation"
+                className="w-full h-full object-cover"
+            />
+        </div>
     </section>
 );
-//
+
 export default InnovationSection;
-
-
-

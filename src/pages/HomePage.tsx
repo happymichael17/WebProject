@@ -12,7 +12,8 @@ import WhoWeServeSection from "../components/WhoWeServe";
 
 export default function HomePage() {
     return (
-        <div className="min-h-screen bg-white w-full max-w-full">
+
+       <div className="min-h-screen bg-white w-full max-w-full sm:px-0 md:px-0">
             <Navbar/>
             <HeroSection/>
             <TrustedBrands/>

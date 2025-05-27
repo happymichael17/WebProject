@@ -2,7 +2,7 @@
 export default function HeroSectionEcitizen() {
         return (
 
-            <section className="relative md:h-full md:w-max-auto px-4 sm:px-8 md:px-12">
+            <section className="relative md:h-full md:w-max-auto px-4 py-4 sm:px-8 md:px-12">
                 <img
                     src="/ecitizen_details.svg"
                     alt="Services background"

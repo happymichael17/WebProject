@@ -3,7 +3,7 @@ import {ArrowRight} from "lucide-react";
 
 export default function HeroSectionServices() {
     return (
-        <section className="w-full px-6 my-4 md:py-2">
+        <section className="relative w-full px-6 my-6 md:py-2">
             <img
                 src="/mobile_development_bg.svg"
                 alt="Services background"

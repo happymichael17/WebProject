@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -50,17 +49,23 @@ export default function TestimonialsSection() {
     };
 
     return (
-        <div style={{ background: '#F3A81C0A' }}>
-            <section className="container sm:p-6 lg:p-12 mx-auto w-full">
-                <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-8 md:mb-12">
+        <div style={{ background: '#F3A81C0A' }} className="py-8 px-4 sm:py-12">
+            <section className="container mx-auto w-full">
+                <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-6 md:mb-10">
                     Happy Customers Say
                 </h2>
+
                 <div className="flex justify-center items-center gap-4 overflow-hidden">
-                    <button onClick={handlePrevious} className="p-2 rounded-full hover:bg-gray-100">
+                    {/* Navigation button - hidden on mobile */}
+                    <button
+                        onClick={handlePrevious}
+                        className="hidden md:block p-2 rounded-full hover:bg-gray-100"
+                        aria-label="Previous testimonial"
+                    >
                         <FontAwesomeIcon icon={faChevronLeft} className="text-2xl text-gray-600" />
                     </button>
 
-                    <div className="relative w-full max-w-2xl h-[360px] flex items-center justify-center">
+                    <div className="relative w-full max-w-2xl h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] flex items-center justify-center px-2 sm:px-4">
                         <AnimatePresence custom={direction} mode="wait">
                             <motion.div
                                 key={currentIndex}
@@ -70,31 +75,56 @@ export default function TestimonialsSection() {
                                 animate="center"
                                 exit="exit"
                                 transition={{ duration: 0.4 }}
-                                className="absolute rounded-2xl shadow-md p-6 md:p-8 flex flex-col items-center border border-gray-300 bg-white/60 w-full"
+                                className="absolute rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col items-center border border-gray-300 bg-white/60 w-full"
+                                // Add swipe handlers for mobile
+                                drag="x"
+                                dragConstraints={{ left: 0, right: 0 }}
+                                dragElastic={1}
+                                onDragEnd={(_e, { offset}) => {
+                                    const swipe = offset.x;
+
+                                    if (swipe < -50) {
+                                        handleNext();
+                                    } else if (swipe > 50) {
+                                        handlePrevious();
+                                    }
+                                }}
                             >
-                                <img src={testimonials[currentIndex].image} alt={`Customer ${currentIndex + 1}`}
-                                     className="w-20 h-20 md:w-24 md:h-24 rounded-full mb-4"/>
-                                <p className="text-center text-black font-semibold text-base md:text-lg">
+                                <img
+                                    src={testimonials[currentIndex].image}
+                                    alt={`Customer ${currentIndex + 1}`}
+                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mb-3 sm:mb-4"
+                                />
+                                <p className="text-center text-black font-semibold text-sm sm:text-base md:text-lg">
                                     — {testimonials[currentIndex].name}
                                     <span className="font-normal"> {testimonials[currentIndex].role}</span>
                                 </p>
-                                <p className="text-gray-600 text-center mt-2 relative text-sm md:text-base">
-                                    <FontAwesomeIcon icon={faQuoteLeft}
-                                                     className="absolute -left-4 top-0 text-yellow-400 text-lg md:text-xl"/>
+                                <p className="text-gray-600 text-center mt-2 relative text-xs sm:text-sm md:text-base px-5 sm:px-8">
+                                    <FontAwesomeIcon
+                                        icon={faQuoteLeft}
+                                        className="absolute -left-1 sm:-left-3 top-0 text-yellow-400 text-sm sm:text-lg md:text-xl"
+                                    />
                                     {testimonials[currentIndex].text}
-                                    <FontAwesomeIcon icon={faQuoteRight}
-                                                     className="absolute -right-4 bottom-0 text-yellow-400 text-lg md:text-xl"/>
+                                    <FontAwesomeIcon
+                                        icon={faQuoteRight}
+                                        className="absolute -right-1 sm:-right-3 bottom-0 text-yellow-400 text-sm sm:text-lg md:text-xl"
+                                    />
                                 </p>
                             </motion.div>
                         </AnimatePresence>
                     </div>
 
-                    <button onClick={handleNext} className="p-2 rounded-full hover:bg-gray-100">
+                    {/* Navigation button - hidden on mobile */}
+                    <button
+                        onClick={handleNext}
+                        className="hidden md:block p-2 rounded-full hover:bg-gray-100"
+                        aria-label="Next testimonial"
+                    >
                         <FontAwesomeIcon icon={faChevronRight} className="text-2xl text-gray-600" />
                     </button>
                 </div>
 
-                <div className="flex justify-center gap-2 mt-4">
+                <div className="flex justify-center gap-2 mt-3 sm:mt-4">
                     {testimonials.map((_, index) => (
                         <button
                             key={index}
@@ -105,6 +135,7 @@ export default function TestimonialsSection() {
                             className={`w-2 h-2 rounded-full ${
                                 index === currentIndex ? 'bg-yellow-400' : 'bg-gray-300'
                             }`}
+                            aria-label={`Go to testimonial ${index + 1}`}
                         />
                     ))}
                 </div>
@@ -112,135 +143,3 @@ export default function TestimonialsSection() {
         </div>
     );
 }
-
-
-
-
-
-
-
-
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import {faQuoteLeft, faQuoteRight, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
-// import {useState} from 'react';
-//
-// export default function TestimonialsSection() {
-//     const testimonials = [
-//         {
-//             image: "/woman_photo.svg",
-//             name: "Jane M.",
-//             role: "CEO, Tech Solutions Ltd",
-//             text: "Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for any digital project!"
-//         },
-//         {
-//             image: "/man_photo.svg",
-//             name: "John D.",
-//             role: "CEO, Tech Innovations Ltd",
-//             text: "Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for any digital project!"
-//         },
-//         {
-//             image: "/man_photo.svg",
-//             name: "John D.",
-//             role: "CEO, Tech Innovations Ltd",
-//             text: "Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for any digital project!"
-//         },
-//         {
-//             image: "/man_photo.svg",
-//             name: "John D.",
-//             role: "CEO, Tech Innovations Ltd",
-//             text: "Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for any digital project!"
-//         }
-//     ];
-//
-//     const [currentIndex, setCurrentIndex] = useState(0);
-//
-//     const handlePrevious = () => {
-//         setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-//     };
-//
-//     const handleNext = () => {
-//         setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-//     };
-//
-//     return (
-//         <div style={{background: '#F3A81C0A'}}>
-//             <section className="container sm:p-6 lg:p-12 mx-auto w-full">
-//                 <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-8 md:mb-12">Happy Customers
-//                     Say</h2>
-//                 <div className="flex justify-center items-center gap-4">
-//                     <button onClick={handlePrevious} className="p-2 rounded-full hover:bg-gray-100">
-//                         <FontAwesomeIcon icon={faChevronLeft} className="text-2xl text-gray-600"/>
-//                     </button>
-//
-//                     <div
-//                         className="rounded-2xl shadow-md p-6 md:p-8 flex flex-col items-center border border-gray-300 bg-white/60 max-w-2xl">
-//                         <img src={testimonials[currentIndex].image} alt={`Customer ${currentIndex + 1}`}
-//                              className="w-20 h-20 md:w-24 md:h-24 rounded-full mb-4"/>
-//                         <p className="text-center text-black font-semibold text-base md:text-lg">
-//                             — {testimonials[currentIndex].name}
-//                             <span className="font-normal"> {testimonials[currentIndex].role}</span>
-//                         </p>
-//                         <p className="text-gray-600 text-center mt-2 relative text-sm md:text-base">
-//                             <FontAwesomeIcon icon={faQuoteLeft}
-//                                              className="absolute -left-4 top-0 text-yellow-400 text-lg md:text-xl"/>
-//                             {testimonials[currentIndex].text}
-//                             <FontAwesomeIcon icon={faQuoteRight}
-//                                              className="absolute -right-4 bottom-0 text-yellow-400 text-lg md:text-xl"/>
-//                         </p>
-//                     </div>
-//
-//                     <button onClick={handleNext} className="p-2 rounded-full hover:bg-gray-100">
-//                         <FontAwesomeIcon icon={faChevronRight} className="text-2xl text-gray-600"/>
-//                     </button>
-//                 </div>
-//
-//                 <div className="flex justify-center gap-2 mt-4">
-//                     {testimonials.map((_, index) => (
-//                         <button
-//                             key={index}
-//                             onClick={() => setCurrentIndex(index)}
-//                             className={`w-2 h-2 rounded-full ${
-//                                 index === currentIndex ? 'bg-yellow-400' : 'bg-gray-300'
-//                             }`}
-//                         />
-//                     ))}
-//                 </div>
-//             </section>
-//         </div>
-//     );
-// }
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-//
-// export default function TestimonialsSection() {
-//     return (
-//         <section className=" py-6 px-8 mx-auto" style={{ background: '#F3A81C0A' }}>
-//             <h2 className="text-3xl font-bold text-black text-center mb-12">Happy Customers Say</h2>
-//             <div className="flex justify-center">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full">
-//                     <div className=" rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300" style={{ backgroundColor: '#F3A81C0A' }}>
-//                         <img src="/woman_photo.svg" alt="Customer 1" className="w-20 h-20 rounded-full mb-4" />
-//                         <p className="text-center text-black font-semibold">— Jane M.CEO, Tech Solutions Ltd</p>
-//                         <p className="text-gray-600 text-center mt-2 relative">
-//                             <FontAwesomeIcon icon={faQuoteLeft} className="absolute -left-4 top-0 text-yellow-400" />
-//                             Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for an...
-//                             <FontAwesomeIcon icon={faQuoteRight} className="absolute -right-4 bottom-0 text-yellow-400" />
-//                         </p>
-//                     </div>
-//
-//                     <div className=" rounded-2xl shadow-md p-6 flex flex-col items-center border border-gray-300" style={{ backgroundColor: '#F3A81C0A' }}>
-//                         <img src="/man_photo.svg" alt="Customer 2" className="w-20 h-20 rounded-full mb-4" />
-//                         <p className="text-center text-black font-semibold">— John D.CEO, Tech Innovations Ltd</p>
-//                         <p className="text-gray-600 text-center mt-2 relative">
-//                             <FontAwesomeIcon icon={faQuoteLeft} className="absolute -left-4 top-0 text-yellow-400" />
-//                             Webmasters Kenya transformed our online presence! Their team developed a sleek, user-friendly website that boosted our customer engagement and sales. The process was smooth, communication was excellent, and they delivered beyond our expectations. Highly recommend them for an...
-//                             <FontAwesomeIcon icon={faQuoteRight} className="absolute -right-4 bottom-0 text-yellow-400" />
-//                         </p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
