@@ -3,11 +3,9 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 export default function CaseStudiesFull() {
     return (
-        // <section className=" px-4 max-w-7xl mx-auto">
-        <section className=" container bg-white sm:p-6 lg:p-12 mx-auto w-full">
-
-        <h2 className="text-3xl text-black font-bold  mb-4">Paramount Results, Real-World Efficiency</h2>
-            <p className="text-lg  text-gray-600 mb-12">
+        <section className="container bg-white p-4 sm:p-6 lg:p-12 mx-auto w-full">
+            <h2 className="text-3xl text-black font-bold mb-4">Paramount Results, Real-World Efficiency</h2>
+            <p className="text-lg text-gray-600 mb-12">
                 We provide tailored technology solutions to meet the unique
                 needs of businesses in Kenya and beyond.
             </p>
@@ -72,7 +70,8 @@ export default function CaseStudiesFull() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">                {/* eCitizen Card */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                {/* eCitizen Card */}
                 <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
                     <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
@@ -130,7 +129,8 @@ export default function CaseStudiesFull() {
             </div>
 
             {/* Remove duplicate and inconsistent card grids below */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">                {/* eCitizen Card */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                {/* eCitizen Card */}
                 <div className="bg-white rounded-4xl shadow-md p-3 relative flex flex-col h-full">
                     <img src="/ecitizen_image.svg" alt="Case Study 1" className="rounded-4xl w-full"/>
                     <div className="mt-4 flex flex-col flex-1">
@@ -186,7 +186,6 @@ export default function CaseStudiesFull() {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 }

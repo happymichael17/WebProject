@@ -64,7 +64,7 @@ const WhatWeOffer = () => {
                     {/* Benefits List for Mobile */}
                     <div className="flex flex-col gap-5 sm:gap-6">
                         {benefits.map((benefit, index) => (
-                            <div key={index} className="flex items-start gap-3 sm:gap-4 p-2 sm:p-3 bg-white  ">
+                            <div key={index} className="flex items-start gap-3 sm:gap-4 p-2 sm:p-3   ">
                                 <div className="flex-shrink-0">
                                     {benefit.icon}
                                 </div>
