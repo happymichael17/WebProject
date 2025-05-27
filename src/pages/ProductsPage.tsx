@@ -38,12 +38,12 @@ export default function ProductsPage() {
             <Navbar/>
             <section className=" container bg-white sm:p-6 lg:p-12 mx-auto w-full">
                 <h2 className="text-3xl font-bold text-center text-black fa-font-awesome mb-8">Browse By Services</h2>
-                <div className="flex justify-center mb-12">
-                    <div className="border-b border-gray-200 flex space-x-8">
+                <div className="flex justify-center mb-4">
+                    <div className="border-b border-gray-200 flex space-x-4">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
-                                className={`pb-4 px-1 text-lg font-bold ${activeTab === tab.id ? 'text-red-500 border-b-2 border-red-500' : 'text-gray-500 hover:text-gray-700'}`}
+                                className={`pb-4 px-1 text-sm md:text-lg font-bold ${activeTab === tab.id ? 'text-red-500 border-b-2 border-red-500' : 'text-gray-500 hover:text-gray-700'}`}
                                 onClick={() => setActiveTab(tab.id)}
                             >
                                 {tab.label}

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import CaseStudiesSection from "../components/LiveProjects";
 import Navbar from "../components/Navbar";
-import ServicesSection from "../components/products";
+import ServicesSection from "../components/ServiceSection.tsx";
 import TecStacks from "../components/TecStacks";
 import TrustedBrands from "../components/TrustedBrands";
 import WhoWeServeSection from "../components/WhoWeServe";

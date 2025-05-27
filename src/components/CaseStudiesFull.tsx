@@ -3,8 +3,10 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 export default function CaseStudiesFull() {
     return (
-        <section className="py-16 px-4 max-w-7xl mx-auto">
-            <h2 className="text-3xl text-black font-bold  mb-4">Paramount Results, Real-World Efficiency</h2>
+        // <section className=" px-4 max-w-7xl mx-auto">
+        <section className=" container bg-white sm:p-6 lg:p-12 mx-auto w-full">
+
+        <h2 className="text-3xl text-black font-bold  mb-4">Paramount Results, Real-World Efficiency</h2>
             <p className="text-lg  text-gray-600 mb-12">
                 We provide tailored technology solutions to meet the unique
                 needs of businesses in Kenya and beyond.

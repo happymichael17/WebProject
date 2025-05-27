@@ -56,16 +56,12 @@ export default function ServicesSection() {
             </h2>
 
             {/* Mobile Tabs - Vertical Stack */}
-            <div className="sm:hidden mb-6">
-                <div className="flex flex-col w-full">
+            <div className="sm:hidden flex justify-center mb-6">
+                <div className="border-b border-gray-200 flex space-x-4">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
-                            className={`py-2 text-left px-3 text-sm font-bold rounded-lg mb-1 ${
-                                activeTab === tab.id
-                                    ? 'text-white bg-red-500'
-                                    : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
-                            }`}
+                            className={`pb-4 px-1 text-sm md:text-lg font-bold ${activeTab === tab.id ? 'text-red-500 border-b-2 border-red-500' : 'text-gray-500 hover:text-gray-700'}`}
                             onClick={() => setActiveTab(tab.id)}
                         >
                             {tab.label}

@@ -34,12 +34,13 @@ const benefits = [
 const MissionAndBenefitsSection = () => {
     return (
         <div style={{backgroundColor: "#F3A81C0A"}}>
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
-                <div className="flex flex-col md:flex-row gap-2">
+            <section className="container mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+                {/* Image container with grid layout */}
+                <div className=" flex flex-col md:flex-row w-full md:grid-cols-2 gap-4">
                     <div className="w-full">
                         <img
                             src="/our_mission.svg"
-                            alt="Vision Image"
+                            alt="Mission Image"
                             className="w-full h-auto object-cover rounded-lg md:rounded-4xl"
                         />
                     </div>
@@ -51,6 +52,7 @@ const MissionAndBenefitsSection = () => {
                         />
                     </div>
                 </div>
+
 
                 <div className="flex items-center gap-4 mt-8 md:mt-12">
                     <hr className="w-12 md:w-16 border-2 border-red-600" />
