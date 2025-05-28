@@ -38,21 +38,21 @@ export default function TrustedBrands() {
     }, []);
 
     return (
-        <section className="py-8 px-8 sm:py-10 md:py-12 container mx-auto w-full">
+        <section className="py-8 px-4 sm:px-6 md:px-8 sm:py-10 md:py-12 container mx-auto w-full">
             {/* Flex row on lg screens, column on smaller screens */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-2">
                 {/* Title section - full width on mobile, appropriate width on desktop */}
-                <div className="mb-6 lg:mb-0 px-12 text-center lg:text-left lg:w-1/4">
+                <div className="mb-6 lg:mb-0 px-4 sm:px-6 md:px-8 text-center lg:text-left lg:w-1/4 lg:flex-shrink-0">
                     <h2 className="text-xl font-bold text-gray-800 leading-tight">
                         Trusted by Leading<br className="sm:hidden" /> Brands
                     </h2>
                 </div>
 
                 {/* Logos section - scrollable on mobile, taking remaining width on desktop */}
-                <div className="lg:w-3/4">
+                <div className="lg:w-3/4 lg:flex-grow">
                     <div
                         ref={scrollContainerRef}
-                        className="w-full overflow-x-auto pb-4"
+                        className="w-full overflow-x-auto pb-4 md:overflow-visible"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         <style>{`
@@ -60,13 +60,13 @@ export default function TrustedBrands() {
                                 display: none;
                             }
                         `}</style>
-                        <div className="flex space-x-6 md:space-x-8 min-w-max md:min-w-0 md:flex-wrap md:justify-center lg:justify-end px-4">
+                        <div className="flex space-x-4 sm:space-x-5 md:space-x-6 min-w-max md:min-w-0 md:flex-wrap md:gap-y-4 md:justify-center lg:justify-end px-2 sm:px-3 md:px-4">
                             {brands.map((brand, index) => (
                                 <div key={index} className="flex items-center flex-shrink-0">
                                     <img
                                         src={brand.logo}
                                         alt={`${brand.name} logo`}
-                                        className="h-8 sm:h-10 md:h-12 opacity-100 grayscale"
+                                        className="h-6 sm:h-7 md:h-8 lg:h-10 w-auto opacity-100 grayscale"
                                     />
                                 </div>
                             ))}
