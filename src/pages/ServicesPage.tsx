@@ -3,6 +3,7 @@ import Footer from "../components/Footer.tsx";
 import HeroSectionServices from "../components/HeroSectionServices.tsx";
 import WhoForServices from "../components/WhoForServices.tsx";
 import WhatWeOffer from "../components/WhatWeOffer.tsx";
+import BackToTop from "../components/BackToTop.tsx";
 
 
 export default function ServicesPage() {
@@ -12,6 +13,7 @@ export default function ServicesPage() {
             <HeroSectionServices />
             <WhatWeOffer/>
             <WhoForServices/>
+            <BackToTop />
             <div className="mt-auto">
                 <Footer />
             </div>

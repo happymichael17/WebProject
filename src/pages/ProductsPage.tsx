@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import BackToTop from "../components/BackToTop.tsx";
 
 export default function ProductsPage() {
 
@@ -127,6 +128,7 @@ export default function ProductsPage() {
                     ))}
                 </div>
             </section>
+            <BackToTop/>
             <div className="mt-auto">
                 <Footer/>
             </div>
