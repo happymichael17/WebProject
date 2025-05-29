@@ -4,6 +4,7 @@ import PlatformsWeDevelopFor from "../components/PlatformsWeDevelopFor";
 import InnovationSection from "../components/innovationSection.tsx";
 import LeadershipSection from "../components/leadershipSection.tsx";
 import MissionAndBenefitsSection from "../components/MissionVision.tsx";
+import BackToTop from "../components/BackToTop.tsx";
 
 export default function AboutUsPage() {
     return (
@@ -13,6 +14,7 @@ export default function AboutUsPage() {
             <PlatformsWeDevelopFor/>
             <MissionAndBenefitsSection/>
             <LeadershipSection/>
+            <BackToTop/>
             <div className="w-full">
                 <Footer/>
             </div>

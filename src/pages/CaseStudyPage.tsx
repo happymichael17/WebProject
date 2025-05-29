@@ -1,6 +1,7 @@
 import Footer from "../components/Footer.tsx";
 import Navbar from '../components/Navbar';
 import CaseStudiesFull from "../components/CaseStudiesFull.tsx";
+import BackToTop from "../components/BackToTop.tsx";
 
 export default function CaseStudyPage() {
     return (
@@ -16,6 +17,7 @@ export default function CaseStudyPage() {
             </main>
 
             {/* Full-width Footer */}
+            <BackToTop/>
             <div className="w-full">
                 <Footer />
             </div>
