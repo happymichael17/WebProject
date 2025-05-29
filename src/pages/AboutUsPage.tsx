@@ -8,13 +8,13 @@ import MissionAndBenefitsSection from "../components/MissionVision.tsx";
 export default function AboutUsPage() {
     return (
         <div className="bg-white w-full max-w-full flex flex-col min-h-screen">
-            <Navbar />
-            <InnovationSection />
-            <PlatformsWeDevelopFor />
-            <MissionAndBenefitsSection />
-            <LeadershipSection />
-            <div className="mt-auto">
-                <Footer />
+            <Navbar/>
+            <InnovationSection/>
+            <PlatformsWeDevelopFor/>
+            <MissionAndBenefitsSection/>
+            <LeadershipSection/>
+            <div className="w-full">
+                <Footer/>
             </div>
         </div>
     );

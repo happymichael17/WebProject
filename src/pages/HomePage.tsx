@@ -8,11 +8,10 @@ import ServicesSection from "../components/ServiceSection.tsx";
 import TecStacks from "../components/TecStacks";
 import TrustedBrands from "../components/TrustedBrands";
 import WhoWeServeSection from "../components/WhoWeServe";
-
+import BackToTop from "../components/BackToTop";
 
 export default function HomePage() {
     return (
-
        <div className="min-h-screen bg-white w-full max-w-full sm:px-0 md:px-0">
             <Navbar/>
             <HeroSection/>
@@ -24,6 +23,7 @@ export default function HomePage() {
             <TestimonialsSection/>
             <TecStacks/>
             <Footer/>
+            <BackToTop />
         </div>
     );
 }
